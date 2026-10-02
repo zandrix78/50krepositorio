@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Estoque | 50K Restaurante</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="brand-box">
+          <div class="brand-mark">50K</div>
+          <div>
+            <h2>50K Restaurante</h2>
+            <p>Gestão Inteligente</p>
+          </div>
+        </div>
+
+        <nav class="menu">
+          <a href="index.html">Dashboard</a>
+          <a href="pedidos.html">Pedidos</a>
+          <a href="cardapio.html">Cardápio</a>
+          <a class="active" href="estoque.html">Estoque</a>
+          <a href="financeiro.html">Financeiro</a>
+          <a href="clientes.html">Clientes</a>
+          <a href="funcionarios.html">Funcionários</a>
+          <a href="marketing.html">Marketing</a>
+          <a href="relatorios.html">Relatórios</a>
+        </nav>
+      </aside>
+
+      <main class="main-panel">
+        <header class="topbar page-header">
+          <div>
+            <p class="eyebrow">Módulo</p>
+            <h1>Controle de Estoque</h1>
+          </div>
+          <button class="primary-btn">+ Registrar Entrada</button>
+        </header>
+
+        <section class="panel full-panel">
+          <div class="panel-head">
+            <h3>Itens com alerta</h3>
+            <span class="badge danger">5 itens críticos</span>
+          </div>
+
+          <table>
+            <thead>
+              <tr>
+                <th>Produto</th>
+                <th>Qtd. atual</th>
+                <th>Estoque mínimo</th>
+                <th>Status</th>
+                <th>Última compra</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Carne de Hambúrguer</td>
+                <td>18 kg</td>
+                <td>25 kg</td>
+                <td><span class="table-status status-prepare">Acabando</span></td>
+                <td>02/10</td>
+              </tr>
+              <tr>
+                <td>Queijo Mussarela</td>
+                <td>12 kg</td>
+                <td>20 kg</td>
+                <td><span class="table-status status-delivery">Comprar</span></td>
+                <td>01/10</td>
+              </tr>
+              <tr>
+                <td>Tomate</td>
+                <td>4 kg</td>
+                <td>10 kg</td>
+                <td><span class="table-status status-prepare">Crítico</span></td>
+                <td>03/10</td>
+              </tr>
+              <tr>
+                <td>Leite</td>
+                <td>7 caixas</td>
+                <td>12 caixas</td>
+                <td><span class="table-status status-finished">Normal</span></td>
+                <td>04/10</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

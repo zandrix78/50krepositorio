@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cardápio | 50K Restaurante</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="brand-box">
+          <div class="brand-mark">50K</div>
+          <div>
+            <h2>50K Restaurante</h2>
+            <p>Gestão Inteligente</p>
+          </div>
+        </div>
+
+        <nav class="menu">
+          <a href="index.html">Dashboard</a>
+          <a href="pedidos.html">Pedidos</a>
+          <a class="active" href="cardapio.html">Cardápio</a>
+          <a href="estoque.html">Estoque</a>
+          <a href="financeiro.html">Financeiro</a>
+          <a href="clientes.html">Clientes</a>
+          <a href="funcionarios.html">Funcionários</a>
+          <a href="marketing.html">Marketing</a>
+          <a href="relatorios.html">Relatórios</a>
+        </nav>
+      </aside>
+
+      <main class="main-panel">
+        <header class="topbar page-header">
+          <div>
+            <p class="eyebrow">Módulo</p>
+            <h1>Cardápio Inteligente</h1>
+          </div>
+          <button class="primary-btn">+ Novo Produto</button>
+        </header>
+
+        <section class="panel full-panel">
+          <div class="panel-head">
+            <h3>Produtos em destaque</h3>
+            <span class="badge success">Disponibilidade ativa</span>
+          </div>
+
+          <div class="card-grid">
+            <article class="product-card">
+              <div class="product-image orange">🍔</div>
+              <h4>Hambúrguer Artesanal</h4>
+              <p>Bacon, queijo extra, ovo e molhos.</p>
+              <div class="product-meta-row">
+                <strong>R$ 34,90</strong>
+                <span>248 vendas</span>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <div class="product-image red">🍕</div>
+              <h4>Pizza Margherita</h4>
+              <p>Molho de tomate, muçarela e manjericão.</p>
+              <div class="product-meta-row">
+                <strong>R$ 49,90</strong>
+                <span>193 vendas</span>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <div class="product-image yellow">🍟</div>
+              <h4>Batata Frita</h4>
+              <p>Porção crocante com sal e tempero.</p>
+              <div class="product-meta-row">
+                <strong>R$ 18,90</strong>
+                <span>287 vendas</span>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <div class="product-image blue">🥤</div>
+              <h4>Refrigerante 600ml</h4>
+              <p>Coca-Cola, Guaraná, Sprite e Fanta.</p>
+              <div class="product-meta-row">
+                <strong>R$ 9,90</strong>
+                <span>314 vendas</span>
+              </div>
+            </article>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

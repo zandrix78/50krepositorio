@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>50K Restaurante - Dashboard</title>
+    <title>50K Restaurante | Dashboard</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
@@ -21,15 +21,15 @@
         </div>
 
         <nav class="menu">
-          <a class="active" href="#">Dashboard</a>
-          <a href="#pedidos">Pedidos</a>
-          <a href="#cardapio">Cardápio</a>
-          <a href="#estoque">Estoque</a>
-          <a href="#financeiro">Financeiro</a>
-          <a href="#clientes">Clientes</a>
-          <a href="#marketing">Marketing</a>
-          <a href="#funcionarios">Funcionários</a>
-          <a href="#relatorios">Relatórios</a>
+          <a class="active" href="index.html">Dashboard</a>
+          <a href="pedidos.html">Pedidos</a>
+          <a href="cardapio.html">Cardápio</a>
+          <a href="estoque.html">Estoque</a>
+          <a href="financeiro.html">Financeiro</a>
+          <a href="clientes.html">Clientes</a>
+          <a href="funcionarios.html">Funcionários</a>
+          <a href="marketing.html">Marketing</a>
+          <a href="relatorios.html">Relatórios</a>
         </nav>
 
         <div class="mini-card">
@@ -53,24 +53,24 @@
           </div>
         </header>
 
-        <section class="hero-grid" id="dashboard">
+        <section class="hero-grid">
           <div class="hero-card highlight">
             <div>
               <span class="label">Faturamento do dia</span>
-              <h2 id="faturamentoDia">R$ 12.480,00</h2>
+              <h2>R$ 12.480,00</h2>
             </div>
             <div class="trend up">+18.4% vs ontem</div>
           </div>
 
           <div class="hero-card compact">
             <span class="label">Pedidos em andamento</span>
-            <h3 id="pedidosAndamento">42</h3>
+            <h3>42</h3>
             <small>12 delivery + 17 salão + 13 balcão</small>
           </div>
 
           <div class="hero-card compact">
             <span class="label">Ticket médio</span>
-            <h3 id="ticketMedio">R$ 86,40</h3>
+            <h3>R$ 86,40</h3>
             <small>+7,2% esta semana</small>
           </div>
         </section>
@@ -122,10 +122,10 @@
         </section>
 
         <section class="content-grid">
-          <div class="panel" id="pedidos">
+          <div class="panel">
             <div class="panel-head">
               <h3>Pedidos recentes</h3>
-              <a href="#">Ver tudo</a>
+              <a href="pedidos.html">Ver tudo</a>
             </div>
             <table>
               <thead>
@@ -141,20 +141,20 @@
             </table>
           </div>
 
-          <div class="panel" id="estoque">
+          <div class="panel">
             <div class="panel-head">
               <h3>Produtos mais vendidos</h3>
-              <a href="#">Ver catálogo</a>
+              <a href="cardapio.html">Ver catálogo</a>
             </div>
             <ul class="list-ranking" id="produtosVendidos"></ul>
           </div>
         </section>
 
         <section class="content-grid lower-grid">
-          <div class="panel" id="financeiro">
+          <div class="panel">
             <div class="panel-head">
               <h3>Fluxo de caixa</h3>
-              <a href="#">Relatório</a>
+              <a href="financeiro.html">Relatório</a>
             </div>
             <div class="chart-box">
               <div class="bar-group">
@@ -169,21 +169,20 @@
             </div>
           </div>
 
-          <div class="panel" id="clientes">
+          <div class="panel">
             <div class="panel-head">
               <h3>Ranking de funcionários</h3>
-              <a href="#">Avaliações</a>
+              <a href="funcionarios.html">Avaliações</a>
             </div>
             <ul class="employee-list" id="rankingFuncionarios"></ul>
           </div>
         </section>
 
-        <section class="module-section" id="cardapio">
+        <section class="module-section">
           <div class="section-title-row">
             <h3>Módulos do sistema</h3>
             <span>Funcionalidades principais</span>
           </div>
-
           <div class="modules-grid" id="modulosSistema"></div>
         </section>
       </main>
