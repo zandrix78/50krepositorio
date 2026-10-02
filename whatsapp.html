@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WhatsApp Integrado | 50K Restaurante</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="brand-box">
+          <div class="brand-mark">50K</div>
+          <div>
+            <h2>50K Restaurante</h2>
+            <p>Gestão Inteligente</p>
+          </div>
+        </div>
+        <nav class="menu">
+          <a href="index.html">Dashboard</a>
+          <a href="pedidos.html">Pedidos</a>
+          <a href="cardapio.html">Cardápio</a>
+          <a href="estoque.html">Estoque</a>
+          <a href="financeiro.html">Financeiro</a>
+          <a href="clientes.html">Clientes</a>
+          <a href="marketing.html">Marketing</a>
+          <a class="active" href="whatsapp.html">WhatsApp</a>
+          <a href="relatorios.html">Relatórios</a>
+        </nav>
+      </aside>
+
+      <main class="main-panel">
+        <header class="topbar page-header">
+          <div>
+            <p class="eyebrow">Módulo</p>
+            <h1>WhatsApp Integrado</h1>
+          </div>
+          <button class="primary-btn">+ Nova Automação</button>
+        </header>
+
+        <section class="stats-grid two-columns">
+          <article class="stat-card">
+            <div class="stat-header"><span>Pedido confirmado</span><span class="badge success">Ativo</span></div>
+            <h3>“Seu pedido foi confirmado.”</h3>
+            <p>Envio automático ao confirmar pagamento.</p>
+          </article>
+          <article class="stat-card">
+            <div class="stat-header"><span>Pedido saiu</span><span class="badge info">Ativo</span></div>
+            <h3>“Seu pedido está a caminho.”</h3>
+            <p>Notificação ao status de entrega.</p>
+          </article>
+        </section>
+
+        <section class="panel full-panel">
+          <div class="panel-head"><h3>Histórico de mensagens</h3><span class="badge warning">12 hoje</span></div>
+          <table>
+            <thead><tr><th>Cliente</th><th>Mensagem</th><th>Tipo</th><th>Hora</th></tr></thead>
+            <tbody>
+              <tr><td>Maria L.</td><td>Seu pedido foi confirmado.</td><td>Confirmação</td><td>18:42</td></tr>
+              <tr><td>João P.</td><td>Seu pedido está a caminho.</td><td>Entrega</td><td>18:50</td></tr>
+              <tr><td>Ana S.</td><td>Como foi sua experiência?</td><td>Feedback</td><td>19:05</td></tr>
+            </tbody>
+          </table>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
