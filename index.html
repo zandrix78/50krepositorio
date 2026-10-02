@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>50K Restaurante - Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="brand-box">
+          <div class="brand-mark">50K</div>
+          <div>
+            <h2>50K Restaurante</h2>
+            <p>Gestão Inteligente</p>
+          </div>
+        </div>
+
+        <nav class="menu">
+          <a class="active" href="#">Dashboard</a>
+          <a href="#pedidos">Pedidos</a>
+          <a href="#cardapio">Cardápio</a>
+          <a href="#estoque">Estoque</a>
+          <a href="#financeiro">Financeiro</a>
+          <a href="#clientes">Clientes</a>
+          <a href="#marketing">Marketing</a>
+          <a href="#funcionarios">Funcionários</a>
+          <a href="#relatorios">Relatórios</a>
+        </nav>
+
+        <div class="mini-card">
+          <span class="status-dot"></span>
+          <div>
+            <small>Loja ativa</small>
+            <strong>Unidade Centro</strong>
+          </div>
+        </div>
+      </aside>
+
+      <main class="main-panel">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">Resumo geral</p>
+            <h1>Dashboard Principal</h1>
+          </div>
+          <div class="topbar-actions">
+            <button class="ghost-btn">Hoje</button>
+            <button class="primary-btn">+ Novo Pedido</button>
+          </div>
+        </header>
+
+        <section class="hero-grid" id="dashboard">
+          <div class="hero-card highlight">
+            <div>
+              <span class="label">Faturamento do dia</span>
+              <h2 id="faturamentoDia">R$ 12.480,00</h2>
+            </div>
+            <div class="trend up">+18.4% vs ontem</div>
+          </div>
+
+          <div class="hero-card compact">
+            <span class="label">Pedidos em andamento</span>
+            <h3 id="pedidosAndamento">42</h3>
+            <small>12 delivery + 17 salão + 13 balcão</small>
+          </div>
+
+          <div class="hero-card compact">
+            <span class="label">Ticket médio</span>
+            <h3 id="ticketMedio">R$ 86,40</h3>
+            <small>+7,2% esta semana</small>
+          </div>
+        </section>
+
+        <section class="stats-grid">
+          <article class="stat-card">
+            <div class="stat-header">
+              <span>Vendas do dia</span>
+              <span class="badge success">+12%</span>
+            </div>
+            <h3>R$ 18.420</h3>
+            <div class="sparkline bars">
+              <span style="height:30%"></span>
+              <span style="height:45%"></span>
+              <span style="height:60%"></span>
+              <span style="height:52%"></span>
+              <span style="height:70%"></span>
+              <span style="height:76%"></span>
+              <span style="height:90%"></span>
+            </div>
+          </article>
+
+          <article class="stat-card">
+            <div class="stat-header">
+              <span>Lucro estimado</span>
+              <span class="badge warning">+8%</span>
+            </div>
+            <h3>R$ 6.240</h3>
+            <p>Margem líquida: 33,8%</p>
+          </article>
+
+          <article class="stat-card">
+            <div class="stat-header">
+              <span>Clientes recorrentes</span>
+              <span class="badge info">74%</span>
+            </div>
+            <h3>1.280</h3>
+            <p>+96 clientes este mês</p>
+          </article>
+
+          <article class="stat-card">
+            <div class="stat-header">
+              <span>Estoque crítico</span>
+              <span class="badge danger">5 itens</span>
+            </div>
+            <h3>12</h3>
+            <p>3 produtos vencendo em 48h</p>
+          </article>
+        </section>
+
+        <section class="content-grid">
+          <div class="panel" id="pedidos">
+            <div class="panel-head">
+              <h3>Pedidos recentes</h3>
+              <a href="#">Ver tudo</a>
+            </div>
+            <table>
+              <thead>
+                <tr>
+                  <th>Pedido</th>
+                  <th>Cliente</th>
+                  <th>Canal</th>
+                  <th>Status</th>
+                  <th>Valor</th>
+                </tr>
+              </thead>
+              <tbody id="pedidosRecentes"></tbody>
+            </table>
+          </div>
+
+          <div class="panel" id="estoque">
+            <div class="panel-head">
+              <h3>Produtos mais vendidos</h3>
+              <a href="#">Ver catálogo</a>
+            </div>
+            <ul class="list-ranking" id="produtosVendidos"></ul>
+          </div>
+        </section>
+
+        <section class="content-grid lower-grid">
+          <div class="panel" id="financeiro">
+            <div class="panel-head">
+              <h3>Fluxo de caixa</h3>
+              <a href="#">Relatório</a>
+            </div>
+            <div class="chart-box">
+              <div class="bar-group">
+                <span style="height: 28%"></span>
+                <span style="height: 34%"></span>
+                <span style="height: 45%"></span>
+                <span style="height: 56%"></span>
+                <span style="height: 68%"></span>
+                <span style="height: 72%"></span>
+                <span style="height: 86%"></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="panel" id="clientes">
+            <div class="panel-head">
+              <h3>Ranking de funcionários</h3>
+              <a href="#">Avaliações</a>
+            </div>
+            <ul class="employee-list" id="rankingFuncionarios"></ul>
+          </div>
+        </section>
+
+        <section class="module-section" id="cardapio">
+          <div class="section-title-row">
+            <h3>Módulos do sistema</h3>
+            <span>Funcionalidades principais</span>
+          </div>
+
+          <div class="modules-grid" id="modulosSistema"></div>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
