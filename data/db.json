@@ -1,0 +1,133 @@
+const express = require('express');
+const fs = require('fs');
+const path = require('path');
+
+const app = express();
+const port = process.env.PORT || 3000;
+const dbPath = path.join(__dirname, 'data', 'db.json');
+
+app.use(express.json());
+app.use(express.static(__dirname));
+
+function readDb() {
+  const raw = fs.readFileSync(dbPath, 'utf8');
+  return JSON.parse(raw);
+}
+
+function writeDb(data) {
+  fs.writeFileSync(dbPath, JSON.stringify(data, null, 2), 'utf8');
+}
+
+app.get('/api/dashboard', (req, res) => {
+  const db = readDb();
+  res.json({
+    faturamentoDia: db.dashboard.faturamentoDia,
+    pedidosAndamento: db.dashboard.pedidosAndamento,
+    ticketMedio: db.dashboard.ticketMedio,
+    vendasDia: db.dashboard.vendasDia,
+    lucroEstimado: db.dashboard.lucroEstimado,
+    clientesRecorrentes: db.dashboard.clientesRecorrentes,
+    estoqueCritico: db.dashboard.estoqueCritico,
+    rankingFuncionarios: db.funcionarios,
+    produtosVendidos: db.produtos,
+    pedidosRecentes: db.pedidos,
+    modulos: db.modulos,
+  });
+});
+
+app.get('/api/pedidos', (req, res) => {
+  const db = readDb();
+  res.json(db.pedidos);
+});
+
+app.get('/api/cardapio', (req, res) => {
+  const db = readDb();
+  res.json(db.cardapio);
+});
+
+app.get('/api/estoque', (req, res) => {
+  const db = readDb();
+  res.json(db.estoque);
+});
+
+app.get('/api/financeiro', (req, res) => {
+  const db = readDb();
+  res.json(db.financeiro);
+});
+
+app.get('/api/clientes', (req, res) => {
+  const db = readDb();
+  res.json(db.clientes);
+});
+
+app.get('/api/funcionarios', (req, res) => {
+  const db = readDb();
+  res.json(db.funcionarios);
+});
+
+app.get('/api/marketing', (req, res) => {
+  const db = readDb();
+  res.json(db.marketing);
+});
+
+app.get('/api/relatorios', (req, res) => {
+  const db = readDb();
+  res.json(db.relatorios);
+});
+
+app.get('/api/modules', (req, res) => {
+  const db = readDb();
+  res.json(db.modulos);
+});
+
+app.post('/api/pedidos', (req, res) => {
+  const db = readDb();
+  const newPedido = {
+    id: `#${1000 + db.pedidos.length}`,
+    cliente: req.body.cliente || 'Cliente novo',
+    canal: req.body.canal || 'Delivery',
+    status: req.body.status || 'Em preparo',
+    pagamento: req.body.pagamento || 'Pix',
+    valor: req.body.valor || 0,
+  };
+
+  db.pedidos.unshift(newPedido);
+  writeDb(db);
+  res.status(201).json(newPedido);
+});
+
+app.post('/api/produtos', (req, res) => {
+  const db = readDb();
+  const novoProduto = {
+    id: Date.now(),
+    nome: req.body.nome || 'Novo produto',
+    quantidade: req.body.quantidade || 0,
+    valor: req.body.valor || 0,
+    categoria: req.body.categoria || 'Geral',
+  };
+
+  db.cardapio.push(novoProduto);
+  writeDb(db);
+  res.status(201).json(novoProduto);
+});
+
+app.get('/api/health', (req, res) => {
+  res.json({ ok: true, message: 'API do sistema de restaurante funcionando.' });
+});
+
+app.get('*', (req, res) => {
+  const filePath = path.join(__dirname, req.path);
+  if (fs.existsSync(filePath) && fs.statSync(filePath).isFile()) {
+    return res.sendFile(filePath);
+  }
+
+  if (req.path === '/' || !req.path.includes('.')) {
+    return res.sendFile(path.join(__dirname, 'index.html'));
+  }
+
+  res.status(404).send('Página não encontrada');
+});
+
+app.listen(port, () => {
+  console.log(`Servidor rodando em http://localhost:${port}`);
+});

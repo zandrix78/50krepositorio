@@ -1,0 +1,20 @@
+{
+  "name": "50k-restaurante",
+  "version": "1.0.0",
+  "description": "Sistema de gestão para restaurante 50K",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "keywords": [
+    "restaurant",
+    "dashboard",
+    "management"
+  ],
+  "author": "zandrix78",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
